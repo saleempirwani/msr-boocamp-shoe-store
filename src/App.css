@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.navbar{
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px 30px;
+  display: flex ;
+  justify-content: space-between;
   align-items: center;
+  width: 100%; 
+  margin-bottom: 40px;
+}
+
+.navbar-label{
+  letter-spacing: 5px;
+  font-size: 150%;
+  margin-bottom: 1px;
+  color: white;
+  border: 0;
+  text-decoration: none;
+}
+
+.navbar label:hover{
+  cursor: pointer;
+}
+
+.navbar ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar ul li{
+  margin: 0 10px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar ul li:hover{
+  border-bottom:  2px solid white;
+  cursor: pointer;
+}
+
+.card{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-alone{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 95%;
+}
+
+.card div{
+  box-shadow: 0 0 5px grey; 
+  margin: 10px;
+  width: 30%;
+}
+
+.card div label{
+  display: inline-block;
+  padding: 10px;
+  letter-spacing: 3px;
+  color: black;
+}
+.card div img{
+  width: 100%;
+}
+
+.card div:hover{
+  cursor: pointer;
+}
+
+.footer{
+  margin-top: 40px;
+  background-color: dodgerblue;
+  padding: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px){
+  .navbar{
+    justify-content: center;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar-label {
+    margin-bottom: 10px;
+  }
+  .card div{
+    width: 100%;
+    margin-bottom: 30px;
+}
+} 
+
+@media (min-width: 600px) and (max-width: 1024px){
+  .card{
+    justify-content: center;
+  }
+  .card div{
+    width: 45%;
   }
 }
